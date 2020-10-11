@@ -1,0 +1,28 @@
+.slider {
+
+	&__item {
+
+	}
+
+	&__item:not(.active) {
+		display: none;
+	}
+
+	&__swiper {
+	}
+
+	&__item {
+	}
+
+	&__content {
+	}
+
+	&__title {
+	}
+
+	&__dotted-divider {
+	}
+
+	&__subtitle {
+	}
+}

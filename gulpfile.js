@@ -100,7 +100,7 @@ gulp.task('serve', gulp.series('html', 'sass', 'js', 'css', 'allimg', 'svg', fun
     gulp.watch("scss/**/*.scss", gulp.series('sass'));
     gulp.watch("*.html", gulp.series('html'));
     gulp.watch("js/**/*.js", gulp.series('js'));
-    gulp.watch("css/**/*.css",gulp.series('css'));
+    gulp.watch("css/**/*.css", gulp.series('css'));
     gulp.watch("img/**/*.{png,jpg}", gulp.series('allimg'));
     gulp.watch("img/**/*.{svg}", gulp.series('svg'));
 }));
