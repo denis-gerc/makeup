@@ -7,27 +7,58 @@
 	}
 
 	&__menu {
-		display: flex;
-		flex-basis: calc(50% - 140px);
-
 
 		.menu {
 			display: flex;
-			justify-content: space-between;
-			flex-grow: 1;
+
+			li.active > a:before {
+				top: 0;
+				transform: scale(1);
+				opacity: 1;
+			}
 
 			&__item {
+				position: relative;
 
 				a {
 					font-family: 'Mulish', sans-serif;
 					font-size: 16px;
 					color: $white;
-					font-weight: bold;
+					font-weight: 700;
+					letter-spacing: 0.1em;
 					text-decoration: none;
 					text-transform: uppercase;
+					padding: 50px 0;
+					margin: 0 30px;
+					position: relative;
 				}
 
 			}
+
+			& > li:first-child > a {
+				margin-left: 0;
+			}
+
+			& > li:last-child > a {
+				margin-right: 0;
+			}
+
+			& > li:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: -2px;
+				margin-top: -3px;
+				width: 5px;
+				height: 5px;
+				border-radius: 5px;
+				background-color: #747771;
+			}
+
+			& > li:first-child::before {
+				display: none;
+			}
+
 
 			&__item.active a::before {
 				content: "";
@@ -47,8 +78,7 @@
 	}
 
 	&__logo {
-		width: 269px;
-		margin: 0 20px;
+
 	}
 
 
