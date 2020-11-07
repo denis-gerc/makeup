@@ -1,3 +1,51 @@
 .mobile-menu {
-	display: none;
+	//display: none;
+
+	.menu {
+		overflow: hidden;
+		height: 0;
+		max-height: 0;
+		list-style-type: none;
+		padding-left: 0;
+		-webkit-transition: linear 1s;
+		transition: linear 1s;
+
+		li {
+			float: none;
+			text-align: left;
+			text-decoration: none;
+			width: 100%;
+			margin: 0;
+			-webkit-transition: linear 1s;
+			transition: linear 1s;
+
+			a {
+				font-size: 16px;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: white;
+				padding: 10px;
+				border-bottom: 1px dashed rgba(255,255,255,0.15);
+				display: block;
+				margin: 0;
+				-webkit-transition: linear 1s;
+				transition: linear 1s;
+			}
+
+		}
+
+		&.open {
+			height: auto;
+			max-height: 500px;
+			-webkit-transition: linear 1s;
+			transition: linear 1s;
+
+		}
+
+	}
+
 }
+
+
+

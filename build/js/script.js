@@ -1,10 +1,15 @@
-window.onload = function menuF() {
-    var menu = document.getElementById('myTopnav');
-    menu.onclick = function myFunction() {
-        if (menu.className === 'topnav') {
-            menu.className += ' responsive';
-        } else {
-            menu.className = 'topnav';
-        }
+$(document).ready(function () {
+    let x = document.getElementById("burger-icon");
+
+    x.addEventListener("click", myFunction);
+
+    function myFunction() {
+        let element = document.getElementById("mobile-menu__list");
+        element.classList.toggle("open");
+
+        x.classList.toggle("change");
     }
-}
+});
+
+
+

@@ -1,10 +1,12 @@
 .desktop-menu {
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 
 	.menu {
+
 		display: flex;
 
 		li.active > a:before, a:hover:before {
@@ -34,6 +36,7 @@
 		}
 
 		&__item {
+
 			position: relative;
 
 			a {
@@ -58,7 +61,7 @@
 				height: 3px;
 				-webkit-transform: scale(0);
 				transform: scale(0);
-				background-color: #ffffff;
+				background-color: $white;
 				opacity: 0;
 				transition: all 0.2s ease 0s;
 			}
@@ -79,6 +82,47 @@
 
 	}
 
+	.burger-line {
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: -20px;
+			bottom: -20px;
+			right: -20px;
+		}
+
+		cursor: pointer;
+		position: relative;
+
+		span:first-child, span:nth-child(2), span:last-child {
+			display: block;
+			width: 35px;
+			height: 3px;
+			background-color: $white;
+			margin: 6px 0;
+			transition: liner 1s;
+		}
+
+		&.change span:first-child {
+			position: absolute;
+			top: 2px;
+			transform: rotate(45deg);
+		}
+
+		&.change span:nth-child(2) {
+			opacity: 0;
+		}
+
+		&.change span:last-child {
+			position: absolute;
+			top: 2px;
+			transform: rotate(-45deg);
+		}
+
+	}
+
 }
 
 @media (max-width: 1070px) {
@@ -95,6 +139,7 @@
 				display: none;
 			}
 
+
 			.menu__item {
 
 				a.icon-menu {
@@ -107,9 +152,9 @@
 
 			}
 
-			li:not([class*="menu__item--home"]) a:not([class="icon-menu"]) {
-				display: none;
-			}
+			//li:not([class*="menu__item--home"]) a:not([class="icon-menu"]) {
+			//	display: none;
+			//}
 
 		}
 
