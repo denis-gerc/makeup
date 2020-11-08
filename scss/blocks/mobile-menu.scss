@@ -1,5 +1,12 @@
 .mobile-menu {
-	//display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 128px 10px 20px 0;
+	transition: all 0.3s ease 0s;
 
 	.menu {
 		overflow: hidden;
@@ -7,17 +14,13 @@
 		max-height: 0;
 		list-style-type: none;
 		padding-left: 0;
-		-webkit-transition: linear 1s;
-		transition: linear 1s;
 
 		li {
-			float: none;
 			text-align: left;
 			text-decoration: none;
 			width: 100%;
 			margin: 0;
-			-webkit-transition: linear 1s;
-			transition: linear 1s;
+			position: relative;
 
 			a {
 				font-size: 16px;
@@ -25,26 +28,74 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				color: white;
-				padding: 10px;
-				border-bottom: 1px dashed rgba(255,255,255,0.15);
+				padding: 20px 20px 20px 15px;
+				border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
 				display: block;
-				margin: 0;
-				-webkit-transition: linear 1s;
-				transition: linear 1s;
+				margin: 0 10px 0 10px;
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 10px;
+					margin-top: -3px;
+					width: 5px;
+					height: 5px;
+					border-radius: 5px;
+					background-color: #747771;
+				}
+
 			}
 
 		}
 
 		&.open {
-			height: auto;
-			max-height: 500px;
-			-webkit-transition: linear 1s;
-			transition: linear 1s;
+			max-height: 100%;
+			transition: all 0.4s ease 0s;
+			padding-bottom: 30px;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: fixed;
+			top: 128px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+
+			& {
+				li:first-child {
+					display: none;
+				}
+			}
 
 		}
 
 	}
 
+}
+
+@media (max-width: 1024px) {
+	body.lock {
+		overflow: hidden;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+}
+
+@media (max-width: 430px) {
+	.desktop-menu {
+
+		nav {
+			display: none;
+		}
+
+		.logo img {
+			display: block;
+			width: 230px;
+		}
+
+	}
 }
 
 
