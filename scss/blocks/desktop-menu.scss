@@ -20,7 +20,7 @@
 			margin-right: 0;
 		}
 
-		li:before {
+		& >  li:before {
 			content: "";
 			position: absolute;
 			top: 50%;
