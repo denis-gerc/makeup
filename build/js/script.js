@@ -1,25 +1,16 @@
 $(document).ready(function () {
-    let x = document.getElementById("burger-icon");
 
-    x.addEventListener("click", myFunction);
+    // Burger menu
 
-    function myFunction() {
-        let element = document.getElementById("mobile-menu__list");
+    $(document).ready(function () {
+        $('.burger-line').click(function (event) {
+            $('#burger-icon').toggleClass('change');
+            $('.mobile-menu__list').toggleClass('open');
+            $('body').toggleClass('lock');
+        });
+    });
 
-        element.classList.toggle("open");
-
-        x.classList.toggle("change");
-
-        $('body').toggleClass('lock');
-
-    }
-
-    // $(document).ready(function () {
-    //     $('.header__burger').click(function (event) {
-    //         $('.header__burger,.header__menu').toggleClass('active');
-    //         $('body').toggleClass('lock');
-    //     });
-    // });
+    // Mobile menu and sub-menu and sub-sub-menu
 
     let isMobile = {
 
@@ -63,8 +54,37 @@ $(document).ready(function () {
         body.classList.add('mouse');
     }
 
+    //Slick Slider
 
-});
+    $('.slider').slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 1,
+        // fade: true,
+        autoplay: false,
+        speed: 1000,
+        autoplaySpeed: 800,
+        adaptiveHeight: true,
+        pauseOnFocus: true,
+
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+}); // end document
 
 
 

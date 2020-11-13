@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/slick.min.js"></script>
+
   <title>Makeup</title>
 </head>
 <body>
@@ -76,7 +78,7 @@
         <!--	mobile menu -->
         <div class="mobile-menu">
           <nav>
-            <ul class="menu" id="mobile-menu__list">
+            <ul class="mobile-menu__list menu " id="mobile-menu__list">
               <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
               <li class="menu__item">
                 <a href="#" class="menu__link">First Level</a>
@@ -97,7 +99,7 @@
                     <a href="#" class="sub-menu__link">Второй уровень</a>
                   </li>
                 </ul>
-                <!-- end submenu -->
+                <!-- end sub-menu -->
 
               </li>
               <li class="menu__item"><a href="#" class="menu__link">Features</a></li>
@@ -116,25 +118,24 @@
 
   <!-- swiper slider -->
   <div class="slider">
-    <ul class="slider__swiper">
-      <li class="slider__item active">
-        <img src="img/images/slide02.jpg" alt="">
-      </li>
-      <li class="slider__item">
-        <img src="img/images/slide01.jpg" alt="">
-      </li>
-      <li class="slider__item">
-        <img src="img/images/slide03.jpg" alt="">
-      </li>
-    </ul>
+    <div class="slider__item">
+      <img src="../img/images/slide01.jpg" alt="">
+    </div>
+    <div class="slider__item">
+      <img src="../img/images/slide02.jpg" alt="">
+    </div>
+    <div class="slider__item">
+      <img src="../img/images/slide03.jpg" alt="">
+    </div>
 
     <!--	slider content	-->
-    <div class="slider__content">
-      <h1 class="slider__title fab fa-youtube">Makeup artist</h1>
-      <hr class="slider__dotted-divider">
-      <h2 class="slider__subtitle">Premium HTML template</h2>
-    </div>
+    <!--    <div class="slider__content">-->
+    <!--      <h1 class="slider__title fab fa-youtube">Makeup artist</h1>-->
+    <!--      <hr class="slider__dotted-divider">-->
+    <!--      <h2 class="slider__subtitle">Premium HTML template</h2>-->
+    <!--    </div>-->
   </div>
+
 
 </div><!-- end page -->
 </body>

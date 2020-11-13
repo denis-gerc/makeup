@@ -1,28 +1,138 @@
+/* Слайдер */
+.slick-slider {
+	min-width: 0;
+
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+
+.slick-list * {
+	height: 100vh;
+}
+
+/* Лента слайдов */
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {
+}
+
+/* Слайд активный */
+.slick-slide.slick-active {
+}
+
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+
+/* Стрелка */
+.slick-arrow, .slick-arrow:focus, .slick-arrow:active   {
+	//border: transparent;
+	cursor: pointer;
+
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+
+/* Точки */
+.slick-dots {
+}
+
+.slick-dots li {
+}
+
+.slick-dots button {
+}
+
+/* Конкретный слайдер */
 .slider {
+	position: relative;
+	height: 100vh;
 
-	&__item {
+}
 
+@media (max-width: 767px) {
+	.slider {
+		width: 100%;
 	}
+}
 
-	&__item:not(.active) {
-		display: none;
-	}
+.slider .slick-arrow {
+	position: absolute;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 60px;
+}
 
-	&__swiper {
-	}
+.slider .slick-arrow.slick-prev {
+	left: 0;
+	background: url('../img/sl-arrow_l.png') 0 0 / 100% no-repeat;
+}
 
-	&__item {
-	}
+.slider .slick-arrow.slick-next {
+	right: 0;
+	background: url('../img/sl-arrow_r.png') 0 0 / 100% no-repeat;
+}
 
-	&__content {
-	}
+.slider .slick-arrow.slick-disabled {
+	opacity: 0.2;
+}
 
-	&__title {
-	}
+.slider .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-	&__dotted-divider {
-	}
+.slider .slick-dots li {
+	list-style: none;
+	margin: 0 10px;
+}
 
-	&__subtitle {
-	}
+.slider .slick-dots button {
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button {
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+
+.slider__item {
+}
+
+.slider__item img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.slider__item.slick-center {
+
 }
