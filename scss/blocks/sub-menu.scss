@@ -72,15 +72,13 @@
 .arrow {
 	display: none;
 	position: absolute;
-	right: 7px;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border-top: 8px solid $white;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent;
+	right: 10px;
+	top: 5px;
+	color: $white;
+	font-size: 14px;
 
 	&.active {
+		transform: translateY(-50%);
 		transform: rotate(-180deg);
 		transition: all 0.3s ease 0s;
 	}
@@ -150,7 +148,6 @@ body.touch .arrow {
 	}
 
 }
-
 
 
 
