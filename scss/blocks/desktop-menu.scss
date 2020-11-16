@@ -10,7 +10,7 @@
 	.menu {
 		display: flex;
 
-		li.active > a:before, a:hover:before {
+		li.active > a:after, li > a:hover:after {
 			top: -5px;
 			transform: scale(1);
 			opacity: 1;
@@ -20,7 +20,7 @@
 			margin-right: 0;
 		}
 
-		& >  li:before {
+		& > li:before {
 			content: "";
 			position: absolute;
 			top: 50%;
@@ -40,7 +40,7 @@
 
 			position: relative;
 
-			a {
+			& > a {
 				font-family: 'Mulish', sans-serif;
 				font-size: 16px;
 				color: $white;
@@ -53,7 +53,7 @@
 				position: relative;
 			}
 
-			&.active a:before, & > a:before {
+			&.active a:after, & > a:after {
 				content: "";
 				position: absolute;
 				top: 0;
@@ -133,7 +133,7 @@
 					padding: 0;
 					margin: 0;
 
-					&:before {
+					&:after {
 						display: none;
 					}
 

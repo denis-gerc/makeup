@@ -41,6 +41,14 @@
 
 	&.open {
 
+		li:last-child {
+			background: url("../img/menu-flowers-bg.png") 50% 100% / 100% no-repeat $white;
+			width: 172px;
+			height: 29px;
+			bottom: 0;
+			padding-bottom: 40px;
+		}
+
 		li > a {
 			color: $black;
 		}
@@ -52,7 +60,7 @@
 		a {
 			display: block;
 			margin: 0;
-			padding: 10px 0;
+			padding: 10px 0 10px 20px;
 			color: $black;
 			font-size: 14px;
 			text-transform: uppercase;
@@ -61,6 +69,19 @@
 
 			&:hover {
 				color: #d02954;
+			}
+
+			&:hover:before {
+				background: url("../img/menu-icon-active.png") 0 0 no-repeat;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				background: url("../img/menu-icon.png") 0 0 no-repeat;
+				width: 12px;
+				height: 12px;
+				left: 25px;
 			}
 
 		}
@@ -121,14 +142,18 @@ body.touch .arrow {
 
 			&.open {
 
-				li {
+				li:last-child {
+
+					background-image: none;
+					background-color: $white;
+					width: 100%;
 
 					a {
 						text-transform: none;
 						padding: 10px;
 
 						&:before {
-							content: "-";
+							content: "";
 							padding-right: 5px;
 						}
 

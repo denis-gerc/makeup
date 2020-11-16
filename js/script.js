@@ -60,7 +60,7 @@ $(document).ready(function () {
         arrows: false,
         dots: false,
         slidesToShow: 1,
-        autoplay: true,
+        autoplay: false,
         speed: 1500,
         autoplaySpeed: 800,
         adaptiveHeight: true,
