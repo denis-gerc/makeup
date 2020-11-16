@@ -37,6 +37,14 @@
 			display: none;
 		}
 
+		&:last-child {
+			background: url("../img/menu-flowers-bg.png") 50% 100% / 100% no-repeat $white;
+			width: 172px;
+			height: 29px;
+			bottom: 0;
+			padding-bottom: 40px;
+		}
+
 	}
 
 	&.open {
@@ -51,6 +59,7 @@
 
 		li > a {
 			color: $black;
+			text-transform: none;
 		}
 
 	}
