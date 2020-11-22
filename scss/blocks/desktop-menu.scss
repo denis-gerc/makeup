@@ -121,30 +121,12 @@
 
 	.desktop-menu {
 
-		nav:last-of-type {
+		nav {
 			display: none;
 		}
 
-		.menu {
-
-			.menu__item {
-
-				a {
-					padding: 0;
-					margin: 0;
-
-					&:after {
-						display: none;
-					}
-
-				}
-
-			}
-
-			li:not([class*="menu__item--home"]) {
-				display: none;
-			}
-
+		.logo img {
+			height: 80px;
 		}
 
 		.burger-line {

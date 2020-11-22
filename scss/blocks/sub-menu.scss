@@ -6,9 +6,10 @@
 	padding-top: 70px;
 	min-width: 200px;
 
-	& > li {
+	.sub-menu__item {
+
 		background-color: $white;
-		padding: 10px 30px 10px 30px;
+		padding: 10px 30px;
 		white-space: nowrap;
 		position: relative;
 
@@ -16,8 +17,13 @@
 			padding-top: 25px;
 		}
 
+		&:first-child:before {
+			display: none;
+		}
+
 		&:last-child {
-			padding-bottom: 25px;
+			padding-bottom: 40px;
+			background: url("../img/menu-flowers-bg.png") 50% 100% / 100% no-repeat $white;
 		}
 
 		&:before {
@@ -33,39 +39,6 @@
 			background-position: center;
 		}
 
-		&:first-child:before {
-			display: none;
-		}
-
-		&:last-child {
-			background: url("../img/menu-flowers-bg.png") 50% 100% / 100% no-repeat $white;
-			width: 172px;
-			height: 29px;
-			bottom: 0;
-			padding-bottom: 40px;
-		}
-
-	}
-
-	&.open {
-
-		li:last-child {
-			background: url("../img/menu-flowers-bg.png") 50% 100% / 100% no-repeat $white;
-			width: 172px;
-			height: 29px;
-			bottom: 0;
-			padding-bottom: 40px;
-		}
-
-		li > a {
-			color: $black;
-			text-transform: none;
-		}
-
-	}
-
-	.sub-menu__item {
-
 		a {
 			display: block;
 			margin: 0;
@@ -77,7 +50,7 @@
 			font-weight: 700;
 
 			&:hover {
-				color: #d02954;
+				color: $color-accent;
 			}
 
 			&:hover:before {
@@ -93,6 +66,21 @@
 				left: 25px;
 			}
 
+		}
+
+	}
+
+	&.open {
+
+		li:last-child {
+			background: url("../img/menu-flowers-bg.png") 50% 100% / 100% no-repeat $white;
+			bottom: 0;
+			padding-bottom: 40px;
+		}
+
+		li > a {
+			color: $black;
+			text-transform: none;
 		}
 
 	}
@@ -113,9 +101,6 @@
 		transition: all 0.3s ease 0s;
 	}
 
-}
-
-.menu__arrow {
 }
 
 body.mouse .menu > li:hover .sub-menu__list {
@@ -140,6 +125,18 @@ body.touch .arrow {
 
 @media (max-width: 1024px) {
 
+	body.mouse {
+
+		.menu {
+
+			li:hover .sub-menu__list {
+				display: none;
+			}
+
+		}
+
+	}
+
 	body.touch {
 
 		.sub-menu__list {
@@ -151,23 +148,15 @@ body.touch .arrow {
 
 			&.open {
 
-				li:last-child {
+				li:first-child {
+					padding-top: 10px;
+				}
 
+				li:last-child {
 					background-image: none;
 					background-color: $white;
-					width: 100%;
-
-					a {
-						text-transform: none;
-						padding: 10px;
-
-						&:before {
-							content: "";
-							padding-right: 5px;
-						}
-
-					}
-
+					width: inherit;
+					padding-bottom: 10px;
 				}
 
 			}
@@ -182,8 +171,3 @@ body.touch .arrow {
 	}
 
 }
-
-
-
-
-
