@@ -61,8 +61,7 @@
 						display: block;
 
 						h1 {
-							@include font-response(108, 38);
-							//font-size: 150px;
+							@include font-response(150, 38);
 							font-weight: 400;
 							color: $white;
 							text-transform: uppercase;
@@ -79,8 +78,7 @@
 
 					.slider__sub-title {
 						h2 {
-							@include font-response(39, 28);
-							//font-size: 45px;
+							@include font-response(45, 28);
 							color: $white;
 							font-style: italic;
 							font-weight: 700;

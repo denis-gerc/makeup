@@ -5,7 +5,7 @@
 
 	.about-me__box {
 		display: flex;
-		margin: -300px auto 40px;
+		margin: -300px auto 45px;
 
 		.about-me__media {
 			display: flex;
@@ -13,7 +13,6 @@
 			position: relative;
 			max-width: 570px;
 			max-height: 820px;
-
 
 			.about-me__bg {
 
@@ -42,6 +41,7 @@
 				}
 
 			}
+
 		}
 
 		.about-me__content {
@@ -51,8 +51,7 @@
 			flex-basis: 45%;
 
 			h2 {
-				@include font-response(60.5, 45);
-				//font-size: 70px;
+				@include font-response(70, 45);
 				line-height: 60px;
 				font-weight: 700;
 				text-transform: uppercase;
@@ -89,8 +88,7 @@
 			h4 {
 				color: $color-accent;
 				font-weight: 400;
-				@include font-response(41.5, 35);
-				//font-size: 45px;
+				@include font-response(45, 35);
 				line-height: 1;
 				margin-top: 53px;
 			}
