@@ -93,9 +93,31 @@
 }
 
 @media (max-width: 1024px) {
-	body.lock {
-		overflow: hidden;
+	body {
+
+		.header {
+
+			.wrap {
+				max-width: 100%;
+			}
+
+		}
+
+		&.lock {
+			overflow: hidden;
+
+			.header {
+
+				.wrap {
+					max-width: 100%;
+				}
+
+			}
+
+		}
+
 	}
+
 
 	.mobile-menu {
 		display: block;

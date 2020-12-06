@@ -3,9 +3,24 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	justify-content: center;
 	z-index: 2;
+
+	& nav:nth-of-type(1) {
+		.menu {
+			li:first-child > a {
+				margin-left: 0;
+			}
+		}
+	}
+
+	& nav:nth-of-type(2) {
+		.menu {
+			li:last-child > a {
+				margin-right: 0;
+			}
+		}
+	}
 
 	.menu {
 		display: flex;
@@ -14,10 +29,6 @@
 			top: -5px;
 			transform: scale(1);
 			opacity: 1;
-		}
-
-		li:last-child > a {
-			margin-right: 0;
 		}
 
 		& > li:before {
@@ -51,24 +62,31 @@
 				padding: 50px 0;
 				margin: 0 30px;
 				position: relative;
-			}
 
-			&.active a:after, & > a:after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 3px;
-				-webkit-transform: scale(0);
-				transform: scale(0);
-				background-color: $white;
-				opacity: 0;
-				transition: all 0.2s ease 0s;
-			}
+				@media (max-width: 1200px) {
+					& {
+						margin: 0 20px;
+					}
+				}
 
-			&:first-child > a {
-				margin-left: 0;
+				&.active a:after, & > a:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 3px;
+					-webkit-transform: scale(0);
+					transform: scale(0);
+					background-color: $white;
+					opacity: 0;
+					transition: all 0.2s ease 0s;
+				}
+
+				&:first-child > a {
+					margin-left: 0;
+				}
+
 			}
 
 		}
@@ -120,6 +138,7 @@
 @media (max-width: 1024px) {
 
 	.desktop-menu {
+		justify-content: space-between;
 
 		nav {
 			display: none;
@@ -135,15 +154,6 @@
 
 	}
 
-}
-
-@media (max-width: 320px) {
-	.desktop-menu {
-
-		.logo img {
-			max-width: 100%;
-		}
-	}
 }
 
 .mobile-menu {

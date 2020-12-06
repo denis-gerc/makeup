@@ -29,7 +29,7 @@
 		.header__wrap {
 
 			&.wrap {
-				padding: 6px 15px;
+				//padding: 6px 15px;
 			}
 
 			.desktop-menu {
@@ -78,7 +78,6 @@
 	.header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 
 		&.minimized {
 
