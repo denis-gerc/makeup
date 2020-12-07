@@ -123,6 +123,13 @@ body.touch .arrow {
 	display: block;
 }
 
+@media (max-width: 1200px) {
+	.arrow {
+		right: 4px;
+	}
+
+}
+
 @media (max-width: 1024px) {
 
 	body.mouse {
