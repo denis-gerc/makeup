@@ -1,55 +1,46 @@
 .about-me {
+	display: flex;
 	position: relative;
 
 	&__box {
 		display: flex;
-		justify-content: space-between;
 		margin: -300px auto;
-		background: $white;
+		box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
+		background: url("../img/side_bg_1.jpg") 0 0 / contain no-repeat $white;
 	}
 
 	&__media {
-		background: url("../img/images/side_bg_1.jpg") 0 0 / cover $white no-repeat;
-		max-width: 451px;
-		height: 100%;
-		padding: 60px 0 60px 60px;
-
+		display: flex;
+		max-width: 510px;
+		max-height: 820px;
+		position: relative;
+		flex-basis: 50%;
+		padding: 60px 30px 60px 60px;
 	}
 
 	&__img {
-		max-height: 700px;
 		width: 100%;
-		border: 30px solid $white;
-		//box-sizing: border-box;
-		box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
+		height: 100%;
+		object-fit: cover;
+		box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+		box-sizing: border-box;
+		border: 30px solid #f9f9f9;
 	}
 
 	&__content {
-		flex-basis: 40%;
-		padding: 60px;
+		flex-basis: 45%;
+		padding: 60px 60px 60px 30px;
 	}
 
-	h2 {
-		@include font-response(70, 35);
-		font-size: 70px;
+	&__title-h2 {
+		@include font-response(70, 25);
 		line-height: 60px;
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #8cb877;
 	}
 
-	.divider {
-		height: 2px;
-		background-image: -webkit-repeating-radial-gradient(center center, #c5c5c5, #c5c5c5 1px, transparent 1px, transparent 100%);
-		background-image: repeating-radial-gradient(center center, #c5c5c5, #c5c5c5 1px, transparent 1px, transparent 100%);
-		background-color: transparent;
-		background-size: 10px 10px;
-		background-position: center;
-		margin: 30px 0 25px;
-		border: none;
-	}
-
-	p:nth-of-type(1) {
+	&__intro {
 		font-size: 24px;
 		line-height: 27px;
 		font-weight: 300;
@@ -57,7 +48,7 @@
 		color: #232323;
 	}
 
-	p {
+	&__text {
 		font-size: 18px;
 		line-height: 27px;
 		font-weight: 300;
@@ -65,15 +56,15 @@
 		margin-bottom: 15px;
 	}
 
-	h4 {
+	&__title-h4 {
 		color: $color-accent;
 		font-weight: 400;
-		font-size: 45px;
+		@include font-response(45, 35);
 		line-height: 1;
 		margin-top: 53px;
 	}
 
-	p:last-of-type {
+	&__subtitle {
 		font-size: 14px;
 		line-height: 44px;
 		font-weight: 700;
@@ -82,5 +73,15 @@
 		color: #499cbb;
 	}
 
+}
 
+.divider {
+	height: 2px;
+	background-image: -webkit-repeating-radial-gradient(center center, #c5c5c5, #c5c5c5 1px, transparent 1px, transparent 100%);
+	background-image: repeating-radial-gradient(center center, #c5c5c5, #c5c5c5 1px, transparent 1px, transparent 100%);
+	background-color: transparent;
+	background-size: 10px 10px;
+	background-position: center;
+	margin: 30px 0 25px;
+	border: none;
 }
