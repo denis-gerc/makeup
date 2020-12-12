@@ -12,25 +12,25 @@ html, body {
 	@include min-max(320px, 100%, 0);
 }
 
-.wrap {
+.container {
 	@include min-max(320px, 1200px, 15px);
 }
 
 // makeup greed
 //@media (max-width: 1200px) {
-//	.wrap {
+//	.container {
 //		max-width: 970px;
 //	}
 //}
 //
 //@media (max-width: 992px) {
-//	.wrap {
+//	.container {
 //		max-width: 750px;
 //	}
 //}
 //
 //@media (max-width: 767px) {
-//	.wrap {
+//	.container {
 //		max-width: none;
 //	}
 //}

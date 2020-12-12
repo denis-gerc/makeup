@@ -1,10 +1,16 @@
+.page {
+	&__about-me {
+		transform: translateY(-38.6%);
+	}
+}
+
 .about-me {
 	display: flex;
 	position: relative;
+	max-height: 820px;
 
 	&__box {
 		display: flex;
-		margin: -300px auto;
 		box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
 		background: url("../img/side_bg_1.jpg") 0 0 / contain no-repeat $white;
 	}
@@ -12,10 +18,9 @@
 	&__media {
 		display: flex;
 		max-width: 510px;
-		max-height: 820px;
 		position: relative;
 		flex-basis: 50%;
-		padding: 60px 30px 60px 60px;
+		padding: 60px 0 60px 60px;
 	}
 
 	&__img {
@@ -29,7 +34,7 @@
 
 	&__content {
 		flex-basis: 45%;
-		padding: 60px 60px 60px 30px;
+		padding: 60px;
 	}
 
 	&__title-h2 {
